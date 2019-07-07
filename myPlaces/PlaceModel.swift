@@ -6,20 +6,21 @@
 //  Copyright © 2019 Aidar Zhussupov. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Place {
     var name: String
-    var location: String
-    var type: String
-    var image: String
+    var location: String?
+    var type: String?
+    var restarauntImage: String?
+    var image: UIImage?
     
        static let restarauntNames = ["Эпоха", "Вечное небо","Koreana"]
     
     static func getPlaces() -> [Place] {
         var places = [Place]()
         for place in restarauntNames {
-            places.append(Place(name: place, location: "Астана", type: "Ресторан", image: place))
+            places.append(Place(name: place, location: "Астана", type: "Ресторан",restarauntImage: place, image: nil))
         }
         return places
     }
